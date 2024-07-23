@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>App Redirect</title>
+    <script type="text/javascript">
+        function redirectToAppStore() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Check for iOS
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = https://apps.apple.com/us/app/dubai-trade/id6503691030';
+            }
+            // Check for Android
+            else if (/android/i.test(userAgent)) {
+                window.location.href = 'https://play.google.com/store/apps/details?id=ae.dubaitrade.dtmobile&hl=en_US';
+            }
+            // Default to a generic page or the web app
+            else {
+                window.location.href = 'https://dubaitrade.ae';
+            }
+        }
+    </script>
+</head>
+<body onload="redirectToAppStore()">
+    <p>Redirecting...</p>
+</body>
+</html>
